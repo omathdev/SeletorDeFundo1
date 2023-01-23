@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:  'Anton', sans-serif;;
+}
+
+body{
+    background-color: rgb(29, 29, 29);
+}
+
+.initialcontent{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 15%;
+margin-bottom: 55px;
+color: blueviolet;
+text-shadow: rgb(239, 239, 241) 1px 1px 1px;
+}
+
+
+button, input{
+    margin-top: 22px;
+    border-radius: 1cm;
+    color: blueviolet;
+}
+
+input{
+    padding: 4px; 
+    text-align: center; 
+    color: black;
+}
+button{
+    padding: 4px;  
+    cursor: pointer; 
+}
+
+h1 {
+  
+    animation:text-pop-up-top 3s infinite alternate ;
+    
+}
+@-webkit-keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  @keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0  #d4b44c, 0 2px 0 #d4b44c, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+
+
+.white{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(12, 10, 14);
+    text-align: center;
+    display: none;
+    
+}
+
+.blue{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: none;  
+}
+.Red {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: none; 
+}
+
+.cores {
+ display: flex; 
+ justify-content: center;
+ align-items: center;
+
+}
+
+.tuto{
+text-align: center;
+color: aliceblue;
+font-family: Arial, Helvetica, sans-serif;
+display: none;
+}
+
+.tuto  p {
+color: aliceblue;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+.Yellow {
+text-align: center;
+display: none;
+}
+
+.Black {
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+.Green{
+  text-align: center;
+  color: white;
+  display: none;
+}

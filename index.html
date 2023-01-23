@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="initialcontent">
+        <h1>Seletor de Cores<br> Para Backgrounds</h1>
+        <input type="text" class="cor">
+        <button onclick="indentcor()">Escolher Cor</button>
+        <a href="#" onclick="comofunciona()">Como Funciona?</a> <br>
+        <div class="tuto">
+         Primeiramente Escolha uma cor Primaria! <br>
+         Black / White / Blue / Red / Yellow / Green 
+         <p style="font-size: 15px" > Em Seguida copie a cor escolhida e coloque na caixa de texto acima
+         e ela te dara todas as Variações de cores, em seguida e so copiar novamete
+         e testar na pripria pagina a cor! </p>
+
+        </div>
+    </div>
+<div class="cores"> 
+    <section class="white">
+        Variações da cor Selecionada <br>
+        Invertido
+        #000000 / #000
+        25% saturado
+        v / #fff
+        Escala de cinzentos
+        #ffffff / #fff
+        25% mais claro
+        #ffffff / #fff
+        Original
+        #ffffff / #fff
+        25% mais escuro
+        #cccccc / #ccc
+        Cor da web: white
+        #ffffff / #fff
+        25% dessaturado
+        #ffffff / #fff
+        HTML: white
+        #ffffff / #fff
+    </section>
+
+    <div class="blue">
+        Variações da cor Selecionada <br>
+        SlateBlue
+         #6A5ACD /
+        DarkSlateBlue
+        #483D8B  /
+        Navy
+        #000080  / 
+        Blue
+        #0000FF  /
+        RoyalBlue
+        #4169E1  /
+        DodgerBlue
+        #1E90FF  /
+        DeepSkyBlue
+        #00BFFF  / 
+        LightSkyBlue	
+        #87CEFA  /
+        LightSteelBlue
+        #B0C4DE  / 
+        SlateGray
+        #708090  /
+    </div>
+    <div class="Red">
+        Variações da cor Selecionada <br>
+        Maroon
+        #800000 /
+        FireBrick
+        #B22222  /
+        Brown
+        #A52A2A  / 
+        DarkSalmon
+        #E9967A  /
+        Coral
+        #FF7F50 /
+        Tomato
+        #FF6347  /
+        Red
+        #FF0000 / 
+        DarkRed
+        #8B0000 /
+    </div>
+    <div class="Yellow">
+        Variações da cor Selecionada <br>
+        Yellow
+        #FFFF00 /
+        Gold
+        #FFD700 /
+        Khaki
+        #F0E68C  / 
+        DarkOrange
+        #FF8C00  /
+        Orange
+        #FFA500 /
+    </div>
+
+    <div class="Black">
+            Variações da cor Selecionada <br>
+            Black
+            #000000 /
+            grey11
+            #1C1C1C  /
+            grey21
+            #363636  / 
+            grey31
+            #4F4F4F  /
+            DimGray
+            #696969 /
+            Gray
+            #808080  /
+            DarkGray
+            #A9A9A9 / 
+            Silver
+            #C0C0C0 /
+
+
+    </div>
+
+        <div class="Green">
+                      Variações da cor Selecionada <br>
+           MediumSpringGreen
+            #00FA9A /
+            SpringGreen
+            #00FF7F /
+            PaleGreen
+            #98FB98  / 
+            MediumSeaGreen
+            #3CB371  /
+            DarkGreen
+            #006400/
+            Lime
+            #00FF00 /
+            LawnGreen
+            #7CFC00 / 
+            GreenYellow
+            #ADFF2F /
+
+        </div>
+
+        
+
+</div>
+
+    <script>
+        function comofunciona(){
+        let tuto = document.querySelector('.tuto')
+        
+        tuto.style.display = 'block'
+
+
+        }
+
+        function indentcor() {
+            let trocacor = document.querySelector('body')
+            let txtcor = document.querySelector('input')
+            let white = document.querySelector('section')
+            let blue = document.querySelector('.blue')
+            let red = document.querySelector('.Red')
+            let tuto = document.querySelector('.tuto')
+            let valorcor = (txtcor.value)
+            let link = document.querySelector('a')
+
+            let cor = [document.querySelector('.Yellow'),document.querySelector('.Black'),document.querySelector('.Green')]
+
+
+            switch (valorcor) {
+
+                case 'white':
+                    blue.style.display = 'none'
+                    trocacor.style.background = 'white'
+                    white.style.display = 'block'
+                    tuto.style.display = 'none'
+                    red.style.display = 'none'
+                    link.style.display = 'none'
+                    cor[0].style.display = 'none'
+                    cor[1].style.display = 'none'
+                    cor[2].style.display = 'none'
+                    break
+                case 'blue':
+                    white.style.display = 'none'
+                    trocacor.style.background = 'blue'
+                    blue.style.display = 'block'
+                    tuto.style.display = 'none'
+                    red.style.display = 'none'
+                    link.style.display = 'none'
+                    cor[0].style.display = 'none'
+                    cor[1].style.display = 'none'
+                    cor[2].style.display = 'none'
+                    break
+                case 'red' :  
+                cor[2].style.display = 'none'
+                white.style.display = 'none'
+                blue.style.display = 'none'
+                tuto.style.display = 'none'
+                trocacor.style.background = 'red'
+                red.style.display = 'block'
+                link.style.display = 'none'
+                cor[0].style.display = 'none'
+                cor[1].style.display = 'none'
+                break
+                case 'yellow' : 
+                trocacor.style.background = 'yellow'
+                white.style.display = 'none'
+                blue.style.display = 'none'
+                tuto.style.display = 'none'
+                red.style.display = 'none'
+                link.style.display = 'none'
+                cor[0].style.display = 'block'
+                cor[1].style.display = 'none'
+                cor[2].style.display = 'none'
+                break
+                case 'black' : 
+                cor[1].style.display = 'block'
+                cor[0].style.display = 'none'
+                trocacor.style.background = 'Black'
+                white.style.display = 'none'
+                blue.style.display = 'none'
+                tuto.style.display = 'none'
+                red.style.display = 'none'
+                link.style.display = 'none'
+                cor[2].style.display = 'none'
+                break
+                case 'green' : 
+                cor[2].style.display = 'block'
+                cor[0].style.display = 'none'
+                trocacor.style.background = 'green'
+                white.style.display = 'none'
+                blue.style.display = 'none'
+                tuto.style.display = 'none'
+                red.style.display = 'none'
+                link.style.display = 'none'
+
+            }
+
+            switch (valorcor) {
+                case '#cccccc':
+                    trocacor.style.background = '#cccccc'
+                    break
+                case '#fff':
+                    trocacor.style.background = '#fff'
+                    break
+                case '#ffffff':
+                    trocacor.style.background = '#ffffff'
+                    break  
+                case '#ffffff ':
+                    trocacor.style.background = '#ffffff '
+                    break 
+                 case ' #000000':
+                    trocacor.style.background = ' #000000'
+                    break 
+                case '#ffffff':
+                    trocacor.style.background = '#ffffff'
+                    break  
+            }
+
+
+
+            switch (valorcor) {
+                case '#6A5ACD':
+                    trocacor.style.background = '#6A5ACD'
+                    break
+                case '#483D8B':
+                    trocacor.style.background = '#483D8B'
+                    break
+                case '#000080':
+                    trocacor.style.background = '#000080'
+                    break
+                case '#0000FF':
+                    trocacor.style.background = '#0000FF'
+                    break
+                case '#4169E1':
+                    trocacor.style.background = '#483D8B'
+                    break
+
+                case '#1E90FF':
+                    trocacor.style.background = '#1E90FF'
+                    break
+                case '#00BFFF':
+                    trocacor.style.background = '#00BFFF'
+                    break
+                case '#87CEFA':
+                    trocacor.style.background = '#0000FF'
+                    break
+                case '#B0C4DE':
+                    trocacor.style.background = '#B0C4DE'
+                    break
+                case '#708090':
+                    trocacor.style.background = '#708090'
+                    break
+            }
+
+            switch (valorcor) {
+                case '#800000':
+                    trocacor.style.background = '#800000'
+                    break
+                case '#B22222':
+                    trocacor.style.background = '#B22222'
+                    break
+                case '#A52A2A':
+                    trocacor.style.background = '#A52A2A'
+                    break
+                case '#E9967A':
+                    trocacor.style.background = '#E9967A'
+                    break
+                case '#FF7F50':
+                    trocacor.style.background = '#FF7F50'
+                    break
+                case '#FF6347':
+                    trocacor.style.background = '#FF6347'
+                    break
+                case '#FF0000':
+                    trocacor.style.background = '#FF0000'
+                    break
+                case '#8B0000':
+                    trocacor.style.background = '#8B0000'
+                    break
+        }
+
+        switch (valorcor) {
+            case '#FFFF00':
+                    trocacor.style.background = '#FFFF00'
+                    break
+                case '#FFD700':
+                    trocacor.style.background = '#FFD700'
+                    break
+                case '#F0E68C':
+                    trocacor.style.background = '#F0E68C'
+                    break
+                case '#FF8C00':
+                    trocacor.style.background = '#FF8C00'
+                    break
+                case '#FFA500':
+                    trocacor.style.background = '#FFA500'
+                    break
+        }
+
+        switch (valorcor) {
+                case '#000000':
+                    trocacor.style.background = '#000000'
+                    break
+                case '#1C1C1C':
+                    trocacor.style.background = '#1C1C1C'
+                    break
+                case '#363636':
+                    trocacor.style.background = '#363636'
+                    break
+                case '#4F4F4F':
+                    trocacor.style.background = '#4F4F4F'
+                    break
+                case '#696969':
+                    trocacor.style.background = '#696969'
+                    break
+                case '#808080':
+                    trocacor.style.background = '#808080'
+                    break
+                case '#A9A9A9':
+                    trocacor.style.background = '#A9A9A9'
+                    break
+                case '#C0C0C0':
+                    trocacor.style.background = '#C0C0C0'
+                    break
+        }
+
+        switch (valorcor) {
+                case '#00FA9A':
+                    trocacor.style.background = '#00FA9A'
+                    break
+                case '#00FF7F':
+                    trocacor.style.background = '#00FF7F'
+                    break
+                case '#98FB98':
+                    trocacor.style.background = '#98FB98'
+                    break
+                case '#3CB371':
+                    trocacor.style.background = '#3CB371'
+                    break
+                case '#006400':
+                    trocacor.style.background = '#006400'
+                    break
+                case '#00FF00':
+                    trocacor.style.background = '#00FF00'
+                    break
+                case '#7CFC00':
+                    trocacor.style.background = '#7CFC00'
+                    break
+                case '#ADFF2F':
+                    trocacor.style.background = '#ADFF2F'
+                    break
+        }
+    }
+    </script>
+
+</body>
+
+</html>
